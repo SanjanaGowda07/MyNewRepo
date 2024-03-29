@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "title": "Customer Request Data",
+  "properties": {
+    "containerType" : {
+      "description": "Container Type",
+      "type" : "string",
+      "pattern": "DRY|REFEER"
+    },
+    "containerSize" : {
+      "description": "Container Size",
+      "type" : "integer",
+      "pattern": "20|40"
+    },
+    "origin" : {
+      "description": "Origin",
+      "type" : "string",
+      "maxLength": 20,
+      "minLength": 5
+    },
+    "destination" : {
+      "description": "destination",
+      "type" : "string",
+      "maxLength": 20,
+      "minLength": 5
+    },
+    "quantity" : {
+      "description": "Quantity",
+      "type" : "integer"
+    },
+    "timestamp" : {
+      "description": "Timestamp",
+      "type": "string",
+      "format" : "date-time"
+    }
+  }
+}
