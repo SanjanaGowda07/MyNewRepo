@@ -1,0 +1,14 @@
+version: '3'
+services:
+  mongo:
+    image: mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+  app:
+    depends_on:
+    - mongo
+    build: ./containerManagement
+    ports:
+      - "8081:8081"
+
