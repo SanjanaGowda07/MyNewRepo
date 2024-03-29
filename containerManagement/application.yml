@@ -1,0 +1,6 @@
+server:
+  data:
+    mongodb: localhost
+    port: 27017
+    database: dbname
+
